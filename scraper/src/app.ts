@@ -1,12 +1,10 @@
 import { storeConfigs } from "./config";
 import { Scraper } from "./scraper";
-import { scrape } from "./scraper_anhoch";
 import { Store } from "./types";
-import { scrape as scrapeAnhoch } from "./scraper_anhoch"
 
 
 const app = async () => {
-  // TODO add arguments check
+  // TODO add arguments check, if no provided run all, else only needed
   for (const store of Object.values(Store)) {
     const storeConfig = storeConfigs[store];
     if (!storeConfig) {
@@ -15,7 +13,8 @@ const app = async () => {
     }
 
     const scraper = await Scraper.init(storeConfigs[store]);
-    await scrapeAnhoch(scraper);
+    await storeConfig.scraper.scrape(scraper);
+    await scraper.browser.close();
   }
 }
 

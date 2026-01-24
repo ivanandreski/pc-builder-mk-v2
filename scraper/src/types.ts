@@ -1,3 +1,6 @@
+import { Scraper } from "./scraper";
+import { IStoreScraper } from "./scraper/IStoreScraper";
+
 export enum Store {
   SETEC = "SETEC",
   DDSTORE = "DDSTORE",
@@ -34,6 +37,7 @@ export interface CategoryConfig {
 
 export interface StoreConfig {
   store: Store;
+  scraper: IStoreScraper;
   baseUrl: string;
   categories: CategoryConfig[]
 }

@@ -15,7 +15,7 @@ export const writeDataToFile = (store: Store, filename: string, data: object | [
   // Posted by kailniris, modified by community. See post 'Timeline' for change history
   // Retrieved 2026-01-24, License - CC BY-SA 4.0
   fs.writeFile(
-    `data/${store.toLocaleLowerCase()}/${filename}.json`,
+    `data/${store.toLocaleLowerCase()}/${filename}`,
     JSON.stringify(data),
     'utf8',
     () => { }

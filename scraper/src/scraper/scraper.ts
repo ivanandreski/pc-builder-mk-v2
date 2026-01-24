@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 import { Browser, BrowserContext, Page } from "@playwright/test";
-import { StoreConfig } from "./types";
+import { StoreConfig } from "@/types";
 
 export class Scraper {
   public readonly storeConfig: StoreConfig;

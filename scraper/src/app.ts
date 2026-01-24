@@ -1,6 +1,6 @@
-import { storeConfigs } from "./config";
-import { Scraper } from "./scraper";
-import { Store } from "./types";
+import { storeConfigs } from "@/config/config";
+import { Scraper } from "@/scraper/scraper";
+import { Store } from "@/types";
 
 
 const app = async () => {

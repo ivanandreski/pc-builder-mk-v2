@@ -1,5 +1,5 @@
-import { Scraper } from "../scraper";
-import { ScrapedProduct } from "../types";
+import { Scraper } from "@/scraper/scraper";
+import { ScrapedProduct } from "@/types";
 
 export interface IStoreScraper {
   scrapedProducts: ScrapedProduct[]

@@ -1,37 +1,37 @@
 import { scraperAnhoch } from "@/scraper/scraper-anhoch";
-import { Category, Store, StoreConfig } from "@/types";
+import { StoreConfig } from "@/types";
 
 export const configAnhoch: StoreConfig = {
-  store: Store.ANHOCH,
+  store: "anhoch",
   scraper: scraperAnhoch,
   baseUrl: 'https://www.anhoch.com/categories',
   categories: [
     {
-      category: Category.CPU,
+      category: "CPU",
       paths: ['/procesori/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1']
     },
     {
-      category: Category.MOBO,
+      category: "MOBO",
       paths: ['/matichni-plochi/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1']
     },
     {
-      category: Category.GPU,
+      category: "GPU",
       paths: ['/grafichki-karti/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1']
     },
     {
-      category: Category.PSU,
+      category: "PSU",
       paths: ['/napojuvanja/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1']
     },
     {
-      category: Category.STORAGE,
+      category: "STORAGE",
       paths: ['/diskovi-i-skladiranje/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1']
     },
     {
-      category: Category.CASE,
+      category: "CASE",
       paths: ['/kukjishta/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1']
     },
     {
-      category: Category.COOLER,
+      category: "COOLER",
       paths: [
         '/vozdushni-ladilnici/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1',
         '/vodeno-ladenje/products?inStockOnly=2&sort=priceLowToHigh&perPage=50&page=1'

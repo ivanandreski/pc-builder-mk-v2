@@ -1,20 +1,5 @@
-import { IStoreScraper } from "@/scraper/IStoreScraper";
-
-export enum Store {
-  SETEC = "SETEC",
-  DDSTORE = "DDSTORE",
-  ANHOCH = "ANHOCH",
-}
-
-export enum Category {
-  CPU = "Processor",
-  MOBO = "Motherboard",
-  GPU = "Graphics Card",
-  PSU = "Power Supply",
-  STORAGE = "Storage",
-  CASE = "Case",
-  COOLER = "CPU Cooler"
-}
+import { StoreScraper } from "@/scraper/types";
+import { Store, Category } from "@/enums";
 
 export interface ScrapedProduct {
   store: Store;
@@ -35,7 +20,7 @@ export interface CategoryConfig {
 
 export interface StoreConfig {
   store: Store;
-  scraper: IStoreScraper;
+  scraper: StoreScraper;
   baseUrl: string;
   categories: CategoryConfig[]
 }

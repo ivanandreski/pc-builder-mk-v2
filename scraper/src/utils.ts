@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { Store } from '@/types';
+import { Store } from '@/enums';
 
 export const convertFormattedPrice = (priceString: string): number => {
   // 1. Remove thousands separator ('.')

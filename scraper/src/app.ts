@@ -7,6 +7,10 @@ export const parseArguments = (): Store[] => {
     STORES.includes(arg as Store)
   ) as Store[];
 
+  if (storeArguments.length == 0) {
+    return [...STORES];
+  }
+
   return storeArguments;
 };
 

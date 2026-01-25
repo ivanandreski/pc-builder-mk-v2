@@ -1,4 +1,4 @@
-export const STORES = ["anhoch", "ddstore", "setec"] as const;
+export const STORES = ["ANHOCH", "DDSTORE", "SETEC"] as const;
 export type Store = (typeof STORES)[number];
 
 export const CATEGORIES = [

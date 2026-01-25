@@ -60,7 +60,7 @@ export const scraperAnhoch = (() => {
       const availability = await page.locator('div.availability').evaluate(e => e.classList.contains('in-stock'))
 
       scrapedProducts.push({
-        store: 'anhoch',
+        store: 'ANHOCH',
         category: 'CPU',
         uniqueId: uniqueId,
         name: productName,

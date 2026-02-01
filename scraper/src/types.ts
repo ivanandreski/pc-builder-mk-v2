@@ -1,4 +1,3 @@
-import { StoreScraper } from "@/scraper/types";
 import { Store, Category } from "@/enums";
 
 export interface ScrapedProduct {
@@ -20,7 +19,6 @@ export interface CategoryConfig {
 
 export interface StoreConfig {
   store: Store;
-  scraper: StoreScraper;
   baseUrl: string;
   categories: CategoryConfig[]
 }

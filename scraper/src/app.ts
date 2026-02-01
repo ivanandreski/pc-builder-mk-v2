@@ -1,6 +1,6 @@
 import { storeConfigs } from "@/config/config";
-import { Scraper } from "@/scraper/scraper";
 import { Store, STORES } from "@/enums";
+import { scraperFactory } from "./scraper/scraper-factory";
 
 export const parseArguments = (): Store[] => {
   const storeArguments: Store[] = process.argv.filter(arg =>
@@ -26,9 +26,12 @@ const app = async () => {
       continue;
     }
 
-    const scraper = await Scraper.init(storeConfigs[store]);
-    await storeConfig.scraper.scrape(scraper);
-    await scraper.browser.close();
+    try {
+      const storeScraper = await scraperFactory(storeConfig);
+      await storeScraper.scrape();
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 

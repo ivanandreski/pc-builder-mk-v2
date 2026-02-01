@@ -1,9 +1,7 @@
-import { scraperAnhoch } from "@/scraper/scraper-anhoch";
 import { StoreConfig } from "@/types";
 
 export const configAnhoch: StoreConfig = {
   store: "ANHOCH",
-  scraper: scraperAnhoch,
   baseUrl: 'https://www.anhoch.com/categories',
   categories: [
     {
